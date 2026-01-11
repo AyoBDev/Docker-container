@@ -3,9 +3,14 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "seed": "node prisma/seed.js"
+    "dev": "nodemon server.js",
+    "seed": "node prisma/seed.js",
+    "docker:build": "docker-compose build",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:logs": "docker-compose logs -f api",
+    "docker:clean": "docker-compose down -v"
   },
   "keywords": [],
   "author": "",
